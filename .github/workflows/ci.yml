@@ -1,0 +1,24 @@
+name: build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+
+    steps:
+      - name: clone repository
+        uses: actions/checkout@v2
+      - name: download deno
+        uses: denolib/setup-deno@master
+        with:
+          deno-version: v1.1.0
+      - run: deno --version
+      - name: check format
+        run: deno fmt --check
+      - name: run tests
+        run: deno test .  --allow-net  --allow-hrtime
+
