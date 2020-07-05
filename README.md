@@ -1,4 +1,11 @@
-# response-time for deno middleware framework serve.
+# response-time
+![Github Action Status](https://github.com/JohannLai/response-time/workflows/build/badge.svg)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![GitHub license](https://img.shields.io/github/license/JohannLai/response-time)](https://github.com/JohannLai/response-time/blob/master/LICENSE)
+[![tag](https://img.shields.io/badge/deno->=1.1.0-green.svg)](https://github.com/denoland/deno)
+[![tag](https://img.shields.io/badge/std-0.59.0-green.svg)](https://github.com/denoland/deno)
+
+`x-response-time` for deno middleware framework serve.
 
 ## Usage
 
@@ -17,7 +24,7 @@ app.use(async ctx => {
 app.listen({ port: 8000 });
 ```
 
-If you need response high resolution in nano time, set hrtime option to true, but you `must` setf `--allow-hrtime ` flag when you run your deno app:
+If you need response high resolution in nano time, set `hrtime` option to true, but you `must` set `--allow-hrtime ` flag when you run your deno app:
 ```ts
 app.use(responseTime({ hrtime: true }));
 ```
