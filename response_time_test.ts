@@ -32,7 +32,7 @@ test({
 
     await superdeno(app.listen())
       .get("/")
-      .expect("x-response-time", /^[0-9]{1,3}.[0-9]{3,17}ms$/)
+      .expect("x-response-time", /^[0-9]{1,3}.[0-9]{3,20}ms$/)
       .expect(404);
   },
 });
