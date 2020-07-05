@@ -2,7 +2,7 @@
 ![Github Action Status](https://github.com/JohannLai/response-time/workflows/build/badge.svg)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 [![GitHub license](https://img.shields.io/github/license/JohannLai/response-time)](https://github.com/JohannLai/response-time/blob/master/LICENSE)
-[![tag](https://img.shields.io/badge/deno->=1.1.0-green.svg)](https://github.com/denoland/deno)
+[![tag](https://img.shields.io/badge/deno->=1.1.3-green.svg)](https://github.com/denoland/deno)
 [![tag](https://img.shields.io/badge/std-0.59.0-green.svg)](https://github.com/denoland/deno)
 
 `x-response-time` for deno middleware framework serve.
