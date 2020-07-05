@@ -1,3 +1,14 @@
+/**
+ * Add X-Response-Time header field.
+ * @param {Dictionary} options options dictionary. { hrtime }
+ *
+ *        hrtime: boolean.
+ *          `true` to use time in nanoseconds， must run deno with `--allow-hrtime`
+ *          `false` to use time in milliseconds.
+ *          Default is `false` to keep back compatible.
+ * @return {Function}
+ * @api public
+ */
 export function responseTime(options?: {
     hrtime: boolean
 }) {
@@ -7,8 +18,7 @@ export function responseTime(options?: {
         let start = ctx[Symbol.for('request-received.startAt')] ? ctx[Symbol.for('request-received.startAt')] : performance.now();
         return next().then(() => {
           let delta = performance.now() - start;
-        
-          console.log(start, delta);
+    
 
           if (!hrtime) {
             // truncate to milliseconds.
