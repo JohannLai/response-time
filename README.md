@@ -24,7 +24,7 @@ app.use(async ctx => {
 app.listen({ port: 8000 });
 ```
 
-If you need response high resolution in nano time, set `hrtime` option to true, but you `must` set `--allow-hrtime ` flag when you run your deno app:
+If you need response high resolution in nano time, set `hrtime` option to true, but you `must` set `--allow-hrtime` flag when you run your deno app:
 ```ts
 app.use(responseTime({ hrtime: true }));
 ```

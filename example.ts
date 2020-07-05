@@ -4,7 +4,7 @@ import { responseTime } from "https://deno.land/x/gh:johannlai:response-time/mod
 const app = new App();
 
 // logger
-app.use(responseTime({hrtime: true}));
+app.use(responseTime({ hrtime: true }));
 
 // response
 app.use(async (ctx) => {
@@ -14,4 +14,3 @@ app.use(async (ctx) => {
 });
 
 await app.listen({ port: 8000 });
-
