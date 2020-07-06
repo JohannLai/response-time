@@ -12,7 +12,7 @@
 Basic usage
 
 ```ts
-import { App } from "https://deno.land/x/gh:johannlai:doa/mod.ts";
+import { App } from "https://deno.land/x/doa/mod.ts";
 import { responseTime } from "https://deno.land/x/gh:johannlai:response-time/mod.ts";
 
 app.use(responseTime());
